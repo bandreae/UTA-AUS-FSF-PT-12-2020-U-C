@@ -8,13 +8,19 @@
     <script type="text/javascript">
       // Loop 10 times
       for (var i = 0; i < 10; i++) {
-        // Generate a random decimal number between 0 and 1
+        // Generate a random decimal number between 0 and 1. 
+        // Math.random function --> Capital M is important 
         var num = Math.random();
 
         // Display in console
         console.log(num);
 
-        
+        if(num < 0.5){
+          console.log("Hello! less than half.");
+        } 
+        else {
+          console.log("Hey! Greater than half.")
+        }
       }
     </script>
   </body>

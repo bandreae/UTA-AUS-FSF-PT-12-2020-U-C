@@ -9,7 +9,36 @@
 
         <script type="text/javascript">
 
-            var bands = ["Shane and Shane", "Johnnyswim", "Twice", "Justin Bieber"];
+            // double and single quotation marks are strings
+            // Numbers are numbers without quotation marks. If with quotes they're strings
+            // Arrays are a set of items wrapped in square brackets. Each item is separated by a comma.
+            // Boolean is true and false. Confirm buttons: ok (yes, true) or cancel (no, false)
+            // Objects are key-value pairs. name is key; Brandon is value.
+            // Most likely everytime you see curly braces it's an object. Square brackets are arrays.
+            var sampleObject = {
+                name: "Brandon", 
+                favorite_color: ["Green","black"],
+                personal_info: {
+                    age: 30, 
+                    height: 72 
+                }
+            }
+            
+            // This is an Array. Items in arrays can be strings, numbers, objects, and arrays.
+            var bands = ["shane and shane", "johnnyswim", "twice", "justin bieber"];
+
+            var favorite_band = prompt("What is your favorite band?");
+
+            var lowerCaseName = favorite_band.toLowerCase();
+
+            console.log(favorite_band);
+
+            if(bands.indexOf(lowerCaseName)!= -1){
+                alert("Yeah, I love them!");
+            }
+            else {
+                alert("Nah. They're pretty lame!")
+            }
 
             
 

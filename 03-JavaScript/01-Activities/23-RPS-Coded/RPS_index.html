@@ -10,18 +10,33 @@
     <script type="text/javascript">
 
     // var welcomeRPS = alert("Let's play 'Rock, paper, scissors!' ");
+    alert("Let's play 'Rock, Paper, Scissors'!");
 
     // var userRPS = prompt("Pick one of the following by typing below: Rock, paper, or scissors"); 
-    
-    // console.log(userRPS);
+    var userRPS = prompt("Pick rock, paper, or scissors");
+
+    // console.log the user's input variable userRPS;
+    console.log(userRPS);
+
 
     var computerRPS
     var compNum = Math.random();
     console.log(compNum);
 
-    if (compNum <= 0.33); {
-        computerInput="rock"
+    if (compNum <= 0.33) {
+        computerInput="rock";
     }
+
+    else if (0.33 < compNum <= 0.67) {
+        computerInput="paper";
+    }
+
+    else (compNum > 0.67); {
+        computerInput="scissors";
+    }
+
+    console.log(computerInput);
+    
 
     // else if
 

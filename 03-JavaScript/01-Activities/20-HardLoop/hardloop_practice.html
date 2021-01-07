@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+    
+    var myFarm= ["chicken", "pigs", "cows", "horses", "ostriches"];
+
+    // Test console.log syntax
+    // console.log(myFarm[0])
+
+
+    // Instructor Demo
+    for(var i =0; i < myFarm.length; i++) {
+        console.log(myFarm[i]);
+
+        // String method - charat https://www.w3schools.com/java/ref_string_charat.asp
+        // or operator --> ||
+        if(myFarm[i].charAt(0) === "c" || myFarm[i].charAt(0) === "o"){
+            alert("Starts with a 'c' or and 'o'");
+        }
+    }
+
+    // // Another way to do it:
+
+    // for (var i =0; i < myFarm.length; i++){
+    //     console.log(myFarm[i].charAt(0));
+    // }
+
+    </script>
+</body>
+</html>

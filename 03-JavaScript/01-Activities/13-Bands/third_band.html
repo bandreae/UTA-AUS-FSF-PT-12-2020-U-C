@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title>Fave Bands</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+    
+    alert("Hello band fellow!");
+    
+    //Array of my favorite bands
+    var myFavBands = ["shane and shane", "johnnyswim", "twice"];
+
+    //Who is the user's favorite band?
+
+    var userBand = prompt("What is your favorite band?");
+    console.log(userBand);
+
+    var lowerCaseBand = "userBand".toLowerCase();
+
+    if (myFavBands.indexOf(lowerCaseBand) != -1){
+        alert("Nah, they're pretty lame!");
+    } else {
+        alert("Yeah, they're the best!");
+    }
+
+    </script>
+    
+</body>
+</html>
