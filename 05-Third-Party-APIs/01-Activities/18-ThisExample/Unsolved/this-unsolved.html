@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>This Example</title>
+</head>
+<body>
+
+  <h1>Make sure to view the console to see the action!</h1>
+
+  <script type="text/javascript">
+
+    // EXAMPLE ONE:
+    // --------------------------------------------------
+    // What is "this" going to print? // "window"
+
+    console.log(this); 
+
+
+    // EXAMPLE TWO:
+    // --------------------------------------------------
+    // What is "this" going to print? // a function --> window NOT function. 
+    // You can always reach outside to the global value to get a value. This is reaching outside to global scope
+
+    function myFunction() {
+      console.log(this);
+    }
+    myFunction(); 
+
+    // EXAMPLE THREE (IMPORTANT):
+    // --------------------------------------------------
+    // What is "someObj.say()" going to print? // Red Hat
+    // this. = the object itsel ("someObj").
+
+    var someObj = {
+      name: "Red Hat",
+      say: function() {
+        console.log(this.name);
+      }
+    };
+    someObj.say(); //
+
+
+    // EXAMPLE FOUR (BONUS, TRICKY!):
+    // --------------------------------------------------
+    // What is "myObj.yell()" going to print? Why? // Star Powerup
+    // Because this is a new function being created, it creates a new scope.
+    // this.name is restricted to the scope on lines 55-56
+
+    var myObj = {
+      name: "",
+      yell: function() {
+        this.name = "Star Powerup";
+
+        var changeName = function(newName) {
+          this.name = newName;
+          //return newName;
+        };
+        //this.name = line 60
+        changeName("Blue Shell");
+        console.log(this);
+      }
+    };
+    myObj.yell();
+
+
+    // EXAMPLE FIVE (BONUS, TRICKY!):
+    // --------------------------------------------------
+    // What is "myObj.yell()" going to print? Why?
+    // Becuase of line 77, the name changed to "Blue Shell"
+
+    var myObj = {
+      name: "",
+      yell: function() {
+
+        // This line is important!
+        var thisObject = this;
+
+        this.name = "Star Powerup";
+        var changeName = function(newName) {
+          thisObject.name = newName;
+        };
+        changeName("Blue Shell");
+        console.log(thisObject);
+      }
+    };
+    myObj.yell();
+
+    //When in doubt, put in as many console.logs as possible so you know what the scope is.
+
+  </script>
+</body>
+</html>
