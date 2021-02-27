@@ -1,4 +1,5 @@
 // TODO: What are we importing?
+// We are importing the fs
 const fs = require('fs');
 
 // TODO: Add comments to explain each of the three arguments of appendFile()

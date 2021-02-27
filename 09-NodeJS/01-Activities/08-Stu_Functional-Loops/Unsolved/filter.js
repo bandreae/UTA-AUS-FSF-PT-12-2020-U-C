@@ -13,7 +13,7 @@ console.log(evenNumbers);
 console.log(originalArray);
 
 const isPrime = num => {
-  // Set up a loop the starts with 2 and continues to increment i as long as i is less than 2
+  // Set up a loop that starts with 2 and continues to increment i as long as i is less than 2
   for (let i = 2; i < num; i++) {
     // isPrime will return false if num is divisible by any number other than 1 or num.
     if (num % i === 0) return false;
