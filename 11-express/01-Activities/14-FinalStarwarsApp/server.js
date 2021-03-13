@@ -79,6 +79,7 @@ app.post('/api/characters', (req, res) => {
   console.log(newCharacter);
 
   characters.push(newCharacter);
+  console.log(characters)
   res.json(newCharacter);
 });
 
