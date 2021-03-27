@@ -15,6 +15,9 @@ User.init(
     },
     username: {
       type: DataTypes.STRING,
+      // prevents null values from being entered for the username, email, and password fields.
+      allowNull: false,
+      isAlphanumeric: true,
     },
     email: {
       type: DataTypes.STRING,
@@ -22,9 +25,14 @@ User.init(
       validate: {
         isEmail: true,
       },
+      // prevents null values from being entered for the username, email, and password fields.
+      allowNull: false,
     },
     password: {
       type: DataTypes.STRING,
+      allowNull: false,
+      // prevents the password from being shorter than eight characters.
+      min: 8,
     },
   },
   {
