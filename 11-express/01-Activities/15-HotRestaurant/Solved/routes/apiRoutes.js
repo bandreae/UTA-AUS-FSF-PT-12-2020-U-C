@@ -49,4 +49,12 @@ module.exports = (app) => {
 
     res.json({ ok: true });
   });
+
+  // app.get('/api/notes', (req,res) => {
+  //   let noteId = req.body.id;
+  //   //look up that id from the datatbase
+  //   const example = "abc"
+  //   res.json(example)
+  //   res.sendFile()
+  // })
 };

@@ -112,7 +112,13 @@
       },
       body: JSON.stringify(newReservation),
     })
+    //after the front-end got the response back from the back-end
+    //The below codes are executed
+
+    //Json-ify the response 
       .then((response) => response.json())
+    //Then depending on the data which gor returned
+    //different alerts are being called
       .then((data) => {
         if (data) {
           // If a table is available... tell user they are booked.
