@@ -53,3 +53,20 @@ db.animals.find().sort({ numLegs:-1 });
 db.animals.find().sort({ class:1 });
 db.animals.find().sort({ class:-1 });
 ```
+db.animals.insert({
+  "name": "Fred", "numLegs": 7, "class": "mammal", "weight": 200})
+
+db.animals.insert({
+  "name": "Bob", "numLegs": 3, "class": "fish", "weight": 100})
+})
+
+db.animals.insert({
+  "name": "Sam", "numLegs": 0, "class": "reptile", "weight": 10})
+
+db.animals.insert({
+  "name": "Reggie", "numLegs": 2, "class": "mammal", "weight": 45})
+})
+
+db.animals.insert({
+  "name": "Larry", "numLegs": 5, "class": "fish", "weight": 75})
+})

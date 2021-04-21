@@ -31,3 +31,10 @@
 ## 🏆 Bonus 
 
 * If you finish early, check out the MongoDB documentation and figure out how to find users by an entry in an array.
+
+> db.students.insert({
+  "name": "Walter",
+  "rownumber": 3,
+  "os": "Windows",
+  "hobbies": ["karate", "karaoke"]
+})
